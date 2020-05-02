@@ -12,8 +12,10 @@ rest.use(express.json());
 
 // Routing
 const questionsController = require('./controllers/questions-controller');
+const answersController = require('./controllers/answers-controller');
 
 rest.get('/questions', questionsController.getAll);
+rest.post('/answers', answersController.saveAnswers);
 
 // Final Export
 exports.api = functions.https.onRequest(rest);
