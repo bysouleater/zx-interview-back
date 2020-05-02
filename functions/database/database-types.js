@@ -3,5 +3,5 @@ const TYPE_MYSQL = 'mysql';
 
 module.exports = {
   TYPE_FIRESTORE,
-  TYPE_MYSQL
+  TYPE_MYSQL,
 };

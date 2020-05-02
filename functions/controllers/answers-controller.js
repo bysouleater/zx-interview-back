@@ -2,8 +2,8 @@ const answersService = require('../services/answers-service');
 
 const saveAnswers = async (req, res) => {
   try {
-    const body = req.body;
-    const id = (await answersService.create(body)).id;
+    const { body } = req;
+    const { id } = await answersService.create(body);
     const answer = await answersService.get(id);
 
     return res.status(201).send(answer);
